@@ -13,7 +13,7 @@ local fruitslist = {
     "Mango",
     "Orange",
     "Papaya",
-    "Peach",
+    "Dragonfruit",
     "Pear",
     "Pineapple", -- richhhh
     "Plum",
@@ -71,6 +71,27 @@ end)
 miscTab:CreateButton("inf pineapple", function() -- clears all dropped fruits
     local fruits = workspace.Fruits.Pineapple
     
+    fruits.Pineapple.CombinedValue.Value = 9999999999
+end)
+miscTab:CreateButton("Get ALL (experimental)", function() -- clears all dropped fruits
+    local fruits = workspace.Fruits.Pineapple
+    
+    local bv = game:GetService("ReplicatedStorage").Events.Server.BuyVehicle
+
+    bv:InvokeServer(1,1)
+    bv:InvokeServer(2,1)
+    bv:InvokeServer(3,1)
+    bv:InvokeServer(4,1)
+    bv:InvokeServer(5,1)
+    bv:InvokeServer(6,1)
+    bv:InvokeServer(7,1)
+    bv:InvokeServer(8,1)
+    bv:InvokeServer(9,1)
+    bv:InvokeServer(10,1)
+    bv:InvokeServer(11,1)
+    bv:InvokeServer(12,1)
+    bv:InvokeServer(13,1)
+    bv:InvokeServer(14,1)
 end)
 miscTab:CreateButton("Collect gold", function()
     game.ReplicatedStorage.Events.Server.Collect:FireServer()
